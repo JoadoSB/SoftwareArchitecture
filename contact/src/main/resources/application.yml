@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    password: 'toor'
+    url: jdbc:postgresql://localhost:5432/contact
+    username: 'postgres'
+  flyway:
+    enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  show-sql: true

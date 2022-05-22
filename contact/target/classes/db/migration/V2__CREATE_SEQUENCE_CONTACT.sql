@@ -1,0 +1,1 @@
+CREATE SEQUENCE contact_id_sequence;
