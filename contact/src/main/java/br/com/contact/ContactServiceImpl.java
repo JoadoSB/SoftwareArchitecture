@@ -14,7 +14,6 @@ public class ContactServiceImpl implements ContactService{
     @Override
     public void createContact(Contact contact) {
         this.contactRepository.save(contact);
-
     }
 
     @Override
@@ -25,5 +24,10 @@ public class ContactServiceImpl implements ContactService{
     @Override
     public List<Contact> getAllContact() {
         return this.contactRepository.findAll();
+    }
+
+    @Override
+    public Contact findByIdContact(Long id) {
+        return this.contactRepository.findById(id).get();
     }
 }

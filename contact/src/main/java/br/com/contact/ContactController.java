@@ -1,5 +1,6 @@
 package br.com.contact;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,20 +20,29 @@ public class ContactController {
     @ResponseStatus(HttpStatus.OK)
     public void createContact(@RequestBody Contact contact){
         this.contactService.createContact(contact);
-        System.out.println("Cadastro realizado com sucesso!");
+        System.out.println("Cadastrado com sucesso!");
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void removeContact(@PathVariable Long id){
         this.contactService.removeContact(id);
-        System.out.println("Cadastro removido com sucesso!");
+        System.out.println("Removido com sucesso!");
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<Contact>> getAllContact(){
         return ResponseEntity.ok().body( this.contactService.getAllContact());
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void updateContact(@PathVariable Long id, @RequestBody Contact contact){
+        Contact contactBD = this.contactService.findByIdContact(id);
+        BeanUtils.copyProperties(contact, contactBD, "id");
+        this.contactService.createContact(contactBD);
+        System.out.println("Atualizado com sucesso!");
     }
 
 }
