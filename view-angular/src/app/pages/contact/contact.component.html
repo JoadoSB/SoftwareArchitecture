@@ -1,0 +1,28 @@
+<table class="table table-dark table-striped">
+  <thead>
+    <tr class="table table-striped">
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts">
+      <th scope="row">{{contact.id}}</th>
+      <td>{{contact.nome}}</td>
+      <td>{{contact.email}}</td>
+      <!--<td>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Ações
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" >Editar</a></li>
+            <li><a class="dropdown-item" >Remover</a></li>
+          </ul>
+        </div>
+      </td>-->
+    </tr>
+  </tbody>
+</table>
