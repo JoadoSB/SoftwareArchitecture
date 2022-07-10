@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "view-angular"
+  "defaultProject": "view-angular",
+  "cli": {
+    "analytics": "54c2654c-7d4f-4247-935b-d9a3bbaf01cc"
+  }
 }

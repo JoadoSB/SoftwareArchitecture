@@ -9,5 +9,8 @@
         <module name="contact" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="endereco" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

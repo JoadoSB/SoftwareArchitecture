@@ -4,14 +4,15 @@
       <th scope="col">Id</th>
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
-      <th>Ações</th>
+      <th>Observações</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let contact of contacts">
       <th scope="row">{{contact.id}}</th>
-      <td>{{contact.nome}}</td>
+      <td>{{contact.name}}</td>
       <td>{{contact.email}}</td>
+      <td>{{contact.obs}}</td>
       <!--<td>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

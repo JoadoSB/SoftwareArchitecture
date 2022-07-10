@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api/contacts")
+@CrossOrigin(origins="*")
 public class ContactController {
 
     @Autowired
