@@ -4,7 +4,8 @@
       <th scope="col">Id</th>
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
-      <th>Observações</th>
+      <th scope="col">Observações</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -13,17 +14,17 @@
       <td>{{contact.name}}</td>
       <td>{{contact.email}}</td>
       <td>{{contact.obs}}</td>
-      <!--<td>
+      <td>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             Ações
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" >Editar</a></li>
-            <li><a class="dropdown-item" >Remover</a></li>
+            <li><a class="dropdown-item" (click)="confirmar(contact.id)">Remover</a></li>
           </ul>
         </div>
-      </td>-->
+      </td>
     </tr>
   </tbody>
 </table>

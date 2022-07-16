@@ -17,4 +17,8 @@ export class ContactsService {
   listarTodosContact(){
     return this.http.get<IContact[]>(`${this.api}/${this.endpoint}/`);
   }
+
+  remover(id:number){
+    return this.http.delete(`${this.api}/${this.endpoint}/${id}`);
+  }
 }

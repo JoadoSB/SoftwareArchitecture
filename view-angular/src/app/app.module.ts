@@ -7,13 +7,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactCadastrarEditarComponent } from './pages/contact/contact-cadastrar-editar/contact-cadastrar-editar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    ContactComponent
+    ContactComponent,
+    ContactCadastrarEditarComponent
   ],
   imports: [
     BrowserModule,

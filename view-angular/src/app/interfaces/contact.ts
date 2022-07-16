@@ -3,4 +3,5 @@ export interface IContact {
   name: string;
   email: string;
   obs: string;
+  ativo?: boolean;
 }
